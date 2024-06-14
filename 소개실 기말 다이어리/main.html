@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일 메인 페이지</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+    <div class="sidebar">
+        <a href="Calendar.html">캘린더</a>
+        <a href="weather.html">일기</a>
+        <a href="guest.html">방명록</a>
+    </div>
+    <div class="content">
+        <header>
+            <div class="header-bg">
+            <nav>                
+                <div class="nav-links">
+                    <a href="login.html">로그인</a>
+                </div>             
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="hero">
+                <h1>모든 작업을 한 곳에서</h1>
+                <p>캘린더, 일기, 방명록 작성을 위한 올인원 작업 공간입니다.</p>                
+            </section>
+            <section class="features">
+                <div><h2>주요 기능</h2></div>
+                <div id="map" class="map-container"></div>
+                <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c791c73bbef19c3ec5c689ece907ebd3"></script>
+                <script>
+                    let container = document.getElementById('map');
+                    let options = {
+                        center: new kakao.maps.LatLng(35.144757, 129.009884),
+                        level: 3
+                    };
+                    let map = new kakao.maps.Map(container, options);
+
+                    let markerPosition = new kakao.maps.LatLng(35.144757, 129.009884);                    
+                    let marker = new kakao.maps.Marker({
+                        position: markerPosition
+                    });
+                    
+
+                    marker.setMap(map);
+                </script>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Diary 스타일 페이지</p>
+        </footer>
+    </div>
+</body>
+</html>

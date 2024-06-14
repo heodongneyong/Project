@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Diary</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+    <header>
+        <h1>일기</h1>
+    </header>
+    <main>
+        <section id="weather-info">
+            <input type="text" id="city-input" placeholder="도시 이름을 영어로 입력하세요">
+            <button id="get-weather-btn">날씨 확인</button>
+            <div id="weather-display"></div>
+        </section>
+        <section id="diary-entry">
+            <input type="date" id="entry-date">
+            <textarea id="entry-text" placeholder="오늘의 일기..."></textarea>
+            <button id="save-btn">저장</button>
+        </section>
+        <section id="diary-list">
+        
+        </section>
+    </main>
+    <script src="weather.js"></script>
+</body>
+</html>
